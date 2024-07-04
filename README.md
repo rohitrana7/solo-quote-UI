@@ -1,5 +1,5 @@
 # solo-quote-UI
-Angular app for quotation plus.
+Angular app - quotation-plus.
 For more information on Angular go to https://angular.io/docs.
 
 ## Development Setup
@@ -13,7 +13,7 @@ For more information on Angular go to https://angular.io/docs.
 Install the Angular CLI globally:
 
 ```
-npm install -g @angular/cli
+npm install -g @angular/cli@17
 ```
 
 Clone the frontend project:
@@ -25,7 +25,7 @@ git clone https://github.com/rohitrana7/solo-quote-UI.git
 Run the Application:
 
 ```
-cd aws-traktis/frontend
+cd solo-quote-UI
 
 npm ci
 
@@ -92,6 +92,11 @@ ng test --code-coverage
 
 If you are getting `ng command not found` add `npx` before the commands
 
+- How to generate karma config
+```
+ng generate config karma
+```
+
 ## How to Deploy the app?
 
 - Create branch from the development.
@@ -112,6 +117,22 @@ git push [Remote_Branch_Name]
 - If the PR checks are passing click the merge button.
 - After that if you're using Jenkins, go to [Jenkins][jenkinsurl] -> ci-build-traktis -> master
 - Run the Job.
+
+## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
 ## Pre-commit Checks
 
