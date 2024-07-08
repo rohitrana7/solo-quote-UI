@@ -21,7 +21,24 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@quotation/core": [
+        "./src/app/core"
+      ],
+      "@quotation/shared": [
+        "./src/app/shared"
+      ],
+      "@quotation/environment": [
+        "./src/environments/environment"
+      ],
+      "@quotation/i18n": [
+        "./src/app/i18n"
+      ],
+      "@quotation/core/testing": [
+        "./src/app/core/testing"
+      ],
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

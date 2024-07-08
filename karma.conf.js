@@ -19,7 +19,8 @@ module.exports = function (config) {
         // for example, you can disable the random execution with `random: false`
         // or set a specific seed with `seed: 4321`
       },
-      clearContext: false // leave Jasmine Spec Runner output visible in browser
+      clearContext: false, // leave Jasmine Spec Runner output visible in browser
+      captureConsole: false,
     },
     jasmineHtmlReporter: {
       suppressAll: true // removes the duplicated traces
@@ -29,11 +30,30 @@ module.exports = function (config) {
       subdir: '.',
       reporters: [
         { type: 'html' },
-        { type: 'text-summary' }
-      ]
+        { type: 'text-summary' },
+        // { type: 'lcov'}
+      ],
+      check: {
+        global: {
+          statements: 80,
+          branches: 75,
+          functions: 80,
+          lines: 80,
+        }
+      }
     },
     reporters: ['progress', 'kjhtml'],
     browsers: ['Chrome'],
+    // port: 9876,
+    // colors: true,
+    // LogLevel: config.LOG_INFO,
+    // autoWatch: true,
+    // browsers: ['ChromeHeadlessNoSandbox'],
+    // customLaunchers: {
+    //   base: 'ChromeHeadless',
+    //   flags: ['--no-sandbox'],
+    // },
+    // singleRun: false,
     restartOnFileChange: true
   });
 };
